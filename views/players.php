@@ -24,7 +24,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/d4031569f3.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="../queries/teamsQuery.js"></script>
+  <script type="text/javascript" src="../queries/playersQuery.js"></script>
 
 
 </head>
@@ -38,16 +38,28 @@ include '../sharedUtilities/menu.html';
 <table id='myTable'>
   <thead>
   <tr>
+    <th>Nombre</th>
+    <th>Posicion</th>
+    <th>Altura</th>
+    <th>Peso</th>
     <th>Equipo</th>
-    <th>Ciudad</th>
-    <th>Conferencia</th>
-    <th>División</th>
   </tr>
   </thead>
-  <tbody id="teams">
-  <script> getTeams();</script>
+  <tbody id="players">
+  <script> getPlayers();</script>
   </tbody>
+  <tfoot>
+  <tr>
+    <td>
+      <button onclick="showPrevious()">Previous</button>
+    </td>
+    <td>
+      <button onclick="showNext()">Next</button>
+    </td>
+  </tr>
+  </tfoot>
 </table>
+
 </body>
 
 
