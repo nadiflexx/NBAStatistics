@@ -42,6 +42,7 @@ include '../sharedUtilities/menu.html';
     <th>Ciudad</th>
     <th>Conferencia</th>
     <th>División</th>
+    <th>Stadium</th>
   </tr>
   </thead>
   <tbody id="teams">

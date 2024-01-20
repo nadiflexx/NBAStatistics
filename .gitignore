@@ -4,4 +4,4 @@
 node_modules
 dist
 .cache
-queries/env.js
+queries/ENV.js

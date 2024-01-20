@@ -1,5 +1,6 @@
 let currentRow = 0;
 const APY_KEY = "ccd4611e67e140d1b39eb9bcc2b49d85";
+
 function showRow(row) {
   // Show the specific row and hide the rest
   const table = document.getElementById('myTable');
@@ -22,7 +23,7 @@ function showPrevious() {
 }
 
 function getPlayers() {
-  fetch('https://api.sportsdata.io/v3/nba/scores/json/PlayersActiveBasic?key='+ APY_KEY, )
+  fetch('https://api.sportsdata.io/v3/nba/scores/json/PlayersActiveBasic?key=' + APY_KEY,)
     .then(response => response.json())
     .then(data => {
       // Assuming 'data' is an array of objects, each representing a team
