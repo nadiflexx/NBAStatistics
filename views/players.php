@@ -29,41 +29,155 @@
 
 </head>
 
+<style>
+  .container table {
+    margin: 0 10px;
+  }
+</style>
 
 <body>
 <?php
 include '../sharedUtilities/menu.html';
 ?>
+<div class="container">
+  <table id='myTable'>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="players">
+    <script> //getPlayers();</script>
+    </tbody>
+  </table>
 
-<table id='myTable'>
-  <thead>
-  <tr>
-    <th>Nombre</th>
-    <th>Posicion</th>
-    <th>Altura</th>
-    <th>Peso</th>
-    <th>Equipo</th>
-  </tr>
-  </thead>
-  <tbody id="players">
-  <script> getPlayers();</script>
-  </tbody>
-  <tfoot>
-  <tr>
-    <td>
-      <button onclick="showPrevious()">Previous</button>
-    </td>
-    <td>
-      <button onclick="showNext()">Next</button>
-    </td>
-  </tr>
-  </tfoot>
-</table>
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topPointsxGame">
+    <script></script>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topScorers">
+    <script></script>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topAssistsxGame">
+    <script></script>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topAssists">
+    <script></script>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topStealsxGame">
+    <script></script>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topStealers">
+    <script></script>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topBlocksxGame">
+    <script></script>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Posicion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Equipo</th>
+    </tr>
+    </thead>
+    <tbody id="topBlockers">
+    <script></script>
+    </tbody>
+  </table>
+
+</div>
 
 </body>
-
-
-
 </html>
 
 

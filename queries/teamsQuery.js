@@ -52,7 +52,6 @@ async function getStadiumCoordinates(id) {
           } else {
             lat = 37.768056;
             lng = -122.387500;
-            console.log("Warriors")
           }
         }
       }
@@ -89,4 +88,26 @@ function showMap(lat, lng) {
   window.open(url);
 }
 
+function getStandings(value) {
+
+  fetch('https://api.sportsdata.io/v3/nba/scores/json/Standings/2024?key=' + APY_KEY)
+    .then(response => response.json())
+    .then(async data => {
+      let counter = 1
+      const tbody = document.getElementById("standings" + value);
+      console.log(data)
+
+      for (const team of data) {
+        if (team.Conference === value) {
+          const row = tbody.insertRow();
+          row.insertCell(0).textContent = counter++;
+          row.insertCell(1).textContent = team.City + " " + team.Name;
+          row.insertCell(2).textContent = team.Wins;
+          row.insertCell(3).textContent = team.Losses;
+          row.insertCell(4).textContent = team.Streak;
+          row.insertCell(5).textContent = team.Percentage;
+        }
+      }
+    });
+}
 

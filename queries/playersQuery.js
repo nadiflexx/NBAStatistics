@@ -1,26 +1,4 @@
-let currentRow = 0;
 const APY_KEY = "ccd4611e67e140d1b39eb9bcc2b49d85";
-
-function showRow(row) {
-  // Show the specific row and hide the rest
-  const table = document.getElementById('myTable');
-  for (let i = 0; i < table.rows.length; i++) {
-    table.rows[i].style.display = (i === row) ? 'table-row' : 'none';
-  }
-  currentRow = row; // Update the current row index
-}
-
-function showNext() {
-  // Show the next row
-  currentRow = (currentRow + 1) % document.getElementById('myTable').rows.length;
-  showRow(currentRow);
-}
-
-function showPrevious() {
-  // Show the previous row
-  currentRow = (currentRow - 1 + document.getElementById('myTable').rows.length) % document.getElementById('myTable').rows.length;
-  showRow(currentRow);
-}
 
 function getPlayers() {
   fetch('https://api.sportsdata.io/v3/nba/scores/json/PlayersActiveBasic?key=' + APY_KEY,)
@@ -38,3 +16,4 @@ function getPlayers() {
       });
     });
 }
+

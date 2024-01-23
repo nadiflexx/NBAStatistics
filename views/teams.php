@@ -25,32 +25,105 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/d4031569f3.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="../queries/teamsQuery.js"></script>
-
-
 </head>
 
+<style>
+
+  th {
+    text-align: left;
+  }
+
+  .teamsStandings {
+    display: inline-grid;
+    margin-left: 5%;
+  }
+
+  .container table {
+    margin: 0 10px;
+  }
+
+  table {
+    padding: 3%;
+  }
+  td {
+    padding: 3%;
+  }
+
+  caption {
+    color: burlywood;
+  }
+
+  .col {
+    display: flex;
+  }
+
+  .row {
+    margin-right: 10px;
+  }
+</style>
 
 <body>
 <?php
 include '../sharedUtilities/menu.html';
 ?>
+<div class="container">
+  <div class="teamsTable">
+    <table id='teamsTable'>
+      <caption>TEAMS</caption>
+      <thead>
+      <tr>
+        <th>Equipo</th>
+        <th>Ciudad</th>
+        <th>Conferencia</th>
+        <th>División</th>
+        <th>Stadium</th>
+      </tr>
+      </thead>
+      <tbody id="teams">
+      <script> getTeams();</script>
+    </table>
+  </div>
 
-<table id='myTable'>
-  <thead>
-  <tr>
-    <th>Equipo</th>
-    <th>Ciudad</th>
-    <th>Conferencia</th>
-    <th>División</th>
-    <th>Stadium</th>
-  </tr>
-  </thead>
-  <tbody id="teams">
-  <script> getTeams();</script>
-  </tbody>
-</table>
+  <div class="teamsStandings">
+    <div class="col">
+      <div class="row">
+        <table>
+          <caption>EASTERN STANDINGS</caption>
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Loses</th>
+            <th>Streak</th>
+            <th>Percentage</th>
+          </tr>
+          </thead>
+          <tbody id="standingsEastern">
+          <script> getStandings("Eastern");</script>
+        </table>
+      </div>
+      <div class="row">
+        <table>
+          <caption>WESTERN STANDINGS</caption>
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Loses</th>
+            <th>Streak</th>
+            <th>Percentage</th>
+          </tr>
+          </thead>
+          <tbody id="standingsWestern">
+          <script> getStandings("Western");</script>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
-
 
 
 </html>
