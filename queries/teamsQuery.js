@@ -9,8 +9,13 @@ function getTeams() {
       console.log(data)
 
       for (const team of data) {
+
         const row = tbody.insertRow();
-        row.insertCell(0).textContent = team.Name;
+        const textNode = document.createTextNode(team.Name);
+        const image = await getTeamsImage(team.WikipediaLogoUrl);
+        const cell = row.insertCell(0);
+        cell.insertBefore(textNode, cell.firstChild); // Inserta el segundo elemento antes que el primero
+        cell.insertBefore(image, cell.firstChild); // Inserta el primer elemento antes que el segundo
         row.insertCell(1).textContent = team.City;
         row.insertCell(2).textContent = team.Conference;
         row.insertCell(3).textContent = team.Division;
@@ -64,6 +69,19 @@ async function getStadiumCoordinates(id) {
     return null;
   }
 }
+
+async function getTeamsImage(logoURL) {
+  const img = document.createElement('img');
+  img.src = logoURL
+  img.width = 50;
+  img.height = 50;
+  img.href = '#';
+  img.addEventListener('click', function () {
+    alert("Click!")
+  });
+  return img;
+}
+
 
 function getGoogleMapsStadiumImage(dataLat, dataLng) {
   const mapBtn = document.createElement('img');

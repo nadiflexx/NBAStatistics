@@ -1,0 +1,37 @@
+
+th {
+  text-align: left;
+}
+
+.teamsStandings {
+  display: inline-grid;
+  margin-left: 5%;
+}
+
+.container table {
+  margin: 0 10px;
+}
+
+table {
+  padding: 3%;
+}
+
+td {
+  padding: 3%;
+}
+
+td img {
+  padding-right: 10%;
+}
+
+caption {
+  color: burlywood;
+}
+
+.col {
+  display: flex;
+}
+
+.row {
+  margin-right: 10px;
+}

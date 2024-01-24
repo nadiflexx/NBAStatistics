@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NBA STATS</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/teams.ccs.css">
 
   <meta name="description" content="">
 
@@ -27,40 +28,6 @@
   <script type="text/javascript" src="../queries/teamsQuery.js"></script>
 </head>
 
-<style>
-
-  th {
-    text-align: left;
-  }
-
-  .teamsStandings {
-    display: inline-grid;
-    margin-left: 5%;
-  }
-
-  .container table {
-    margin: 0 10px;
-  }
-
-  table {
-    padding: 3%;
-  }
-  td {
-    padding: 3%;
-  }
-
-  caption {
-    color: burlywood;
-  }
-
-  .col {
-    display: flex;
-  }
-
-  .row {
-    margin-right: 10px;
-  }
-</style>
 
 <body>
 <?php
