@@ -32,6 +32,7 @@
 <body>
 <?php
 include '../sharedUtilities/menu.html';
+include '../sharedUtilities/splash.php';
 ?>
 
 
@@ -143,11 +144,6 @@ include '../sharedUtilities/menu.html';
     }
   });
 </script>
-
-
-
-
-
 </body>
 
 </html>

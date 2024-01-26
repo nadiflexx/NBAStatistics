@@ -25,19 +25,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/d4031569f3.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="../queries/playersQuery.js"></script>
-
-
 </head>
-
-<style>
-  .container table {
-    margin: 0 10px;
-  }
-</style>
 
 <body>
 <?php
 include '../sharedUtilities/menu.html';
+include '../sharedUtilities/splash.php'
 ?>
 <div class="container">
   <table id='myTable'>
